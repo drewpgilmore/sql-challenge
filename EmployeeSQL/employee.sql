@@ -89,20 +89,34 @@ SELECT e.emp_no,
     e.first_name,
     d.dept_name
 FROM employees e
-
+INNER JOIN dept_emp ON e.emp_no = dept_emp.emp_no
+INNER JOIN departments d ON d.dept_no = dept_emp.dept_no
+WHERE d.dept_name = 'Sales';
 
 -- 7. List all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.
 
+SELECT e.emp_no,
+    e.last_name,
+    e.first_name,
+    d.dept_name
+FROM employees e
+INNER JOIN dept_emp ON e.emp_no = dept_emp.emp_no
+INNER JOIN departments d ON d.dept_no = dept_emp.dept_no
+WHERE d.dept_name = 'Sales' or d.dept_name = 'Development';
 
 -- 8. In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.
 
-
-
+SELECT e.last_name,
+count(*)
+FROM employees e
+GROUP BY 1
+ORDER BY 2 DESC;
 
 --Bonus 
 --As you examine the data, you are overcome with a creeping suspicion that the dataset is fake. 
 --You surmise that your boss handed you spurious data in order to test the data engineering skills of a new employee. 
 --To confirm your hunch, you decide to take the following steps to generate a visualization of the data, with which you will confront your boss:
+
 
 --Import the SQL database into Pandas. (Yes, you could read the CSVs directly in Pandas, but you are, after all, trying to prove your technical mettle.) 
 --This step may require some research. Feel free to use the code below to get started. 
