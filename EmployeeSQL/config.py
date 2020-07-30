@@ -1,0 +1,1 @@
+postgresql_url = 'postgresql://postgres:Flwrpwr1!@localhost/EmployeeSQL'
