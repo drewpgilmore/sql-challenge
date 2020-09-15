@@ -1,2 +1,2 @@
-# sql-challenge
-SQL Homework
+# SQL Demo
+Exercise utilizing PostgreSQL, 
