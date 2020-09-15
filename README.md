@@ -1,2 +1,2 @@
 # SQL Demo
-Exercise utilizing PostgreSQL, 
+Exercise utilizing PostgreSQL, SQLAlchemy, Pandas, Matplotlib.
